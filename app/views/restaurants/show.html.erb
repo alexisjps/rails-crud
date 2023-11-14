@@ -1,0 +1,10 @@
+<h1>Restaurants#show</h1>
+<p>Find me in app/views/restaurants/show.html.erb</p>
+
+<p><%= @restaurant.name %></p>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+
+<%= link_to "Edit #{@restaurant.name}", edit_restaurant_path, class: 'btn btn-warning text-white' %>
+<%= link_to "Delete #{@restaurant.name}", @restaurant,
+  data: {turbo_method: :delete, turbo_confirm: 'Veux tu le supprimer ?'}, class: 'btn btn-danger text-white' %>
